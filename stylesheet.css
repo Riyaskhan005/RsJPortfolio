@@ -658,3 +658,78 @@ animation: animate-bar 1s linear forward;
         opacity: 1;
     }
 }
+/* Skills Section */
+.skills-container {
+    text-align: center;
+    max-width: 600px;
+    padding: 20px;
+}
+
+.title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Cards Layout for 2-3-2 */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* First row with 2 items */
+.cards > .card:nth-child(1),
+.cards > .card:nth-child(2) {
+    flex: 0 0 48%; /* 2 items in the first row */
+}
+
+/* Second row with 3 items */
+.cards > .card:nth-child(3),
+.cards > .card:nth-child(4),
+.cards > .card:nth-child(5) {
+    flex: 0 0 30%; /* 3 items in the second row */
+}
+
+/* Third row with 2 items */
+.cards > .card:nth-child(6) {
+    flex: 0 0 48%; /* 2 items in the third row */
+}
+
+/* Card Styling */
+/* Card Styling */
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover Effect with Glow */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px #f909f9, 0 0 20px #f909f9; /* Glow effect */
+    background: rgb(0, 0, 0); /* Optional: Dark background on hover */
+    color: #fff; /* Optional: Change text color on hover */
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .cards {
+        justify-content: space-between;
+    }
+
+    /* Adjust for single-column display on mobile */
+    .cards > .card {
+        flex: 0 0 100%; /* 1 item per row on small screens */
+    }
+}
